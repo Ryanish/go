@@ -3,19 +3,18 @@ package main
 import (
 	"fmt"
 	"log"
-
-	"github.com/ryanish/go/coordinates"
 )
 
-func main() {
-	coordinates :=
-	err := 	coordinates.SetLatitude(37.42)
+func main2() {
+	coordinates := geo.Coordinates{}
+	err := coordinates.SetLatitude(37.42)
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = coordinates.SetLongitude(-122.08)
+	err = coordinates.SetLongitude(-1122.08)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(coordinates.Lat)
+	fmt.Println(coordinates.Latitude())
+	fmt.Println(coordinates.Longitude())
 }
